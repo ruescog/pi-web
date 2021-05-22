@@ -1,0 +1,9 @@
+table {
+    margin: auto;
+    margin-top: 2%;
+    width: 50%;
+}
+
+tr:not(.mat-header-row):hover {
+    background-color: rgb(194, 194, 194);
+}

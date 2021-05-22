@@ -1,0 +1,25 @@
+@import "../app.component.css";
+
+table {
+    margin-top: 0%;
+    width: 75%;
+}
+
+.filtro {
+    margin: auto;
+    margin-top: 2%;
+    margin-left: 12.5%;
+    width: 75%;
+}
+
+.super_clasificado {
+    background-color: rgb(250, 240, 99);
+}
+
+.clasificado {
+    background-color: rgb(158, 247, 161);
+}
+
+.no_clasificado {
+    background-color: rgb(159, 214, 240);
+}
