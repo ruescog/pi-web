@@ -8,7 +8,7 @@ import { JugadorEquipoSpike } from './JugadorEquipoSpike';
 })
 export class OdiseaService {
 
-  private odiseaUrl = "http://127.0.0.1:30504/clasificacion-odisea"
+  private odiseaUrl = "https://pi-web-service.herokuapp.com/clasificacion-odisea"
 
   constructor(private http: HttpClient) { }
 
