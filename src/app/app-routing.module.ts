@@ -6,7 +6,7 @@ import { OdiseaComponent } from './odisea/odisea.component';
 const routes: Routes = [
   {path: "", redirectTo: "/indice", pathMatch: "full"},
   {path: "indice", component: IndiceComponent},
-  {path: "odisea", component: OdiseaComponent}
+  {path: "odisea/:idtournament", component: OdiseaComponent}
   // {path: "**", component: PageNotFoundComponent}
 ];
 

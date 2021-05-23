@@ -11,6 +11,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { IndiceComponent } from './indice/indice.component';
 import { OdiseaComponent } from './odisea/odisea.component';
@@ -20,7 +21,8 @@ const angularMaterial = [
   MatDividerModule,
   MatTableModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatMenuModule
 ];
 
 @NgModule({

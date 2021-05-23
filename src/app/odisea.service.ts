@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { JugadorEquipoSpike } from './JugadorEquipoSpike';
 
@@ -9,11 +9,12 @@ import { JugadorEquipoSpike } from './JugadorEquipoSpike';
 export class OdiseaService {
 
   private odiseaUrl = "https://pi-web-service.herokuapp.com/clasificacion-odisea"
+  // private odiseaUrl = "http://127.0.0.1:30504/clasificacion-odisea"
 
   constructor(private http: HttpClient) { }
 
-  getClasificacion(): Observable<JugadorEquipoSpike[]> {
-    return this.http.get<JugadorEquipoSpike[]>(this.odiseaUrl)
+  getClasificacion(idtournament: number): Observable<JugadorEquipoSpike[]> {
+    return this.http.get<JugadorEquipoSpike[]>(this.odiseaUrl + "/" + idtournament)
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

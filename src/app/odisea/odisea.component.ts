@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { MatTableDataSource } from '@angular/material/table';
+
 import { OdiseaService } from '../odisea.service';
 
 @Component({
@@ -12,14 +15,15 @@ export class OdiseaComponent implements OnInit {
   clasificacion: any
   columnas = ["position", "coach_name", "team_name", "idrace", "wins", "draws", "losses", "ranking", "td", "cas"]
 
-  constructor(private odiseaService: OdiseaService) { }
+  constructor(private route: ActivatedRoute, private location: Location, private odiseaService: OdiseaService) { }
 
   ngOnInit(): void {
     this.getClasificacion()
   }
 
   getClasificacion(): void {
-    this.odiseaService.getClasificacion()
+    const idtournament = Number(this.route.snapshot.paramMap.get("idtournament"))
+    this.odiseaService.getClasificacion(idtournament)
       .subscribe(jugadores => this.clasificacion = new MatTableDataSource(jugadores))
   }
 

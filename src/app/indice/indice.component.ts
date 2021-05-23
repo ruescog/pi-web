@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+
 import { IndiceService } from '../indice.service';
-import { Jugador } from '../Jugador';
 
 @Component({
   selector: 'app-indice',
@@ -9,8 +10,8 @@ import { Jugador } from '../Jugador';
 })
 export class IndiceComponent implements OnInit {
 
-  clasificacion: Jugador[] = []
-  columnas: string[] = ["id", "nombre"] //TODO añadir esto bien
+  clasificacion: any
+  columnas = ["position", "coach_name", "wins", "draws", "losses", "td", "ctd", "dtd", "cas", "ccas", "dcas", "concesions", "points"]
 
   constructor(private indiceService: IndiceService) { }
 
@@ -19,7 +20,12 @@ export class IndiceComponent implements OnInit {
   }
 
   getClasificacion(): void {
-    this.clasificacion = this.indiceService.getClasificacion()
+    this.indiceService.getClasificacion()
+      .subscribe(posiciones => this.clasificacion = new MatTableDataSource(posiciones))
   }
 
+  filtrar(event: Event): void {
+    const input = (event.target as HTMLInputElement).value;
+    this.clasificacion.filter = input.trim().toLowerCase();
+  }
 }

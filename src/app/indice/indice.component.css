@@ -1,1 +1,17 @@
 @import "../app.component.css";
+
+table {
+    margin-top: 0%;
+    width: 75%;
+}
+
+.filtro {
+    margin: auto;
+    margin-top: 2%;
+    margin-left: 12.5%;
+    width: 75%;
+}
+
+.clasificado {
+    background-color: rgb(158, 247, 161);
+}
