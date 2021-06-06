@@ -6,10 +6,9 @@ import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class IndiceService {
+export class CircuitoService {
 
   private circuitoUrl = "https://pi-web-service.herokuapp.com/indice"
-  // private circuitoUrl = "http://127.0.0.1:30504/indice"
 
   constructor(private http: HttpClient) { }
 
@@ -19,7 +18,7 @@ export class IndiceService {
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
-      console.error(error); // log to console instead
+      console.error(error);
       return of(result as T);
     };
   }

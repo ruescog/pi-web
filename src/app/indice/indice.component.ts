@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-
-import { IndiceService } from '../indice.service';
 
 @Component({
   selector: 'app-indice',
@@ -10,22 +7,9 @@ import { IndiceService } from '../indice.service';
 })
 export class IndiceComponent implements OnInit {
 
-  clasificacion: any
-  columnas = ["position", "coach_name", "wins", "draws", "losses", "td", "ctd", "dtd", "cas", "ccas", "dcas", "concesions", "points"]
-
-  constructor(private indiceService: IndiceService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getClasificacion()
-  }
-
-  getClasificacion(): void {
-    this.indiceService.getClasificacion()
-      .subscribe(posiciones => this.clasificacion = new MatTableDataSource(posiciones))
-  }
-
-  filtrar(event: Event): void {
-    const input = (event.target as HTMLInputElement).value;
-    this.clasificacion.filter = input.trim().toLowerCase();
+    
   }
 }

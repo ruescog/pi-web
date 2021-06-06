@@ -6,7 +6,7 @@ export interface JugadorEquipoSpike {
     losses: number,
     td: number,
     cas: number,
-    idrace: string,
+    race_name: string,
     team_name: string,
     coach_name: string,
     idteam: string,

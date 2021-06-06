@@ -1,6 +1,7 @@
 <div class="menu">
   <nav class="botones">
-    <a mat-button routerLink="/indice">Índice</a>
+    <!-- <a mat-button routerLink="/indice">Índice</a> -->
+    <a mat-button routerLink="/circuito">Circuito</a>
 
     <button mat-button [matMenuTriggerFor]="odisea">Odisea</button>
     <mat-menu #odisea="matMenu">
@@ -9,11 +10,11 @@
       <a mat-menu-item (click)="goToOdisea('16941')">VI ODISEA</a>
       <a mat-menu-item (click)="goToOdisea('13836')">V ODISEA</a>
       <a mat-menu-item (click)="goToOdisea('12219')">IV ODISEA</a>
+      <a mat-menu-item (click)="goToOdisea('2')">III ODISEA</a>
     </mat-menu>
 
-    <!-- <a mat-button color="accent">Accent</a>
-    <a mat-button color="warn">Warn</a>
-    <a mat-button disabled>Disabled</a> -->
+    <!-- <a mat-button routerLink="/torneo-presencial">Torneo presencial</a> -->
+    <a mat-button routerLink="/cambios">Cambios</a>
   </nav>
 </div>
 <mat-divider></mat-divider>

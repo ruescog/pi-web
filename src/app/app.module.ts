@@ -12,9 +12,16 @@ import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { IndiceComponent } from './indice/indice.component';
 import { OdiseaComponent } from './odisea/odisea.component';
+import { CambiosComponent } from './cambios/cambios.component';
+import { TorneoPresencialComponent } from './torneo-presencial/torneo-presencial.component';
+import { CircuitoComponent } from './circuito/circuito.component';
 
 const angularMaterial = [
   MatButtonModule,
@@ -22,14 +29,21 @@ const angularMaterial = [
   MatTableModule,
   MatFormFieldModule,
   MatInputModule,
-  MatMenuModule
+  MatMenuModule,
+  MatBadgeModule,
+  MatExpansionModule,
+  MatSnackBarModule,
+  MatProgressSpinnerModule
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     IndiceComponent,
-    OdiseaComponent
+    OdiseaComponent,
+    CambiosComponent,
+    TorneoPresencialComponent,
+    CircuitoComponent
   ],
   imports: [
     BrowserModule,

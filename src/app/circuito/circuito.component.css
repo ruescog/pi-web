@@ -18,14 +18,6 @@ table {
     margin-top: 10%;
 }
 
-.super_clasificado {
-    background-color: rgb(250, 240, 99);
-}
-
 .clasificado {
     background-color: rgb(158, 247, 161);
-}
-
-.no_clasificado {
-    background-color: rgb(159, 214, 240);
 }

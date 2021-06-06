@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { IndiceService } from './indice.service';
+import { CircuitoService } from './circuito.service';
 
-describe('IndiceService', () => {
-  let service: IndiceService;
+describe('CircuitoService', () => {
+  let service: CircuitoService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(IndiceService);
+    service = TestBed.inject(CircuitoService);
   });
 
   it('should be created', () => {
