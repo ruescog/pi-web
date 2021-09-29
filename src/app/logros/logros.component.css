@@ -1,0 +1,24 @@
+@import "../app.component.css";
+
+table {
+    width: 75%;
+    margin-bottom: 2.5%;
+}
+
+.filtro {
+    margin: auto;
+    margin-top: 2.5%;
+    width: 75%;
+}
+
+.encabezado {
+    margin: auto;
+    margin-top: 3%;
+    width: 75%;
+}
+
+.leyenda {
+    margin: auto;
+    margin-top: 3%;
+    width: 75%;
+}

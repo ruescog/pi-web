@@ -18,10 +18,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { IndiceComponent } from './indice/indice.component';
-import { OdiseaComponent } from './odisea/odisea.component';
 import { CambiosComponent } from './cambios/cambios.component';
-import { TorneoPresencialComponent } from './torneo-presencial/torneo-presencial.component';
 import { CircuitoComponent } from './circuito/circuito.component';
+import { CclComponent } from './ccl/ccl.component';
+import { LogrosComponent } from './logros/logros.component';
 
 const angularMaterial = [
   MatButtonModule,
@@ -40,10 +40,10 @@ const angularMaterial = [
   declarations: [
     AppComponent,
     IndiceComponent,
-    OdiseaComponent,
     CambiosComponent,
-    TorneoPresencialComponent,
-    CircuitoComponent
+    CircuitoComponent,
+    CclComponent,
+    LogrosComponent
   ],
   imports: [
     BrowserModule,

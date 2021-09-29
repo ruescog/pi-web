@@ -3,18 +3,19 @@
     <!-- <a mat-button routerLink="/indice">Índice</a> -->
     <a mat-button routerLink="/circuito">Circuito</a>
 
-    <button mat-button [matMenuTriggerFor]="odisea">Odisea</button>
-    <mat-menu #odisea="matMenu">
-      <button mat-menu-item (click)="goToOdisea('23749')">VIII ODISEA</button>
-      <a mat-menu-item (click)="goToOdisea('19856')">VII ODISEA</a>
-      <a mat-menu-item (click)="goToOdisea('16941')">VI ODISEA</a>
-      <a mat-menu-item (click)="goToOdisea('13836')">V ODISEA</a>
-      <a mat-menu-item (click)="goToOdisea('12219')">IV ODISEA</a>
-      <a mat-menu-item (click)="goToOdisea('2')">III ODISEA</a>
+    <button mat-button [matMenuTriggerFor]="ccl">CCL</button>
+    <mat-menu #ccl="matMenu">
+      <a mat-menu-item (click)="goToTournament('ccl')">I CARTHAGO</a>
+      <a mat-menu-item (click)="goToTournament('23749')">VIII ODISEA</a>
+      <a mat-menu-item (click)="goToTournament('19856')">VII ODISEA</a>
+      <a mat-menu-item (click)="goToTournament('16941')">VI ODISEA</a>
+      <a mat-menu-item (click)="goToTournament('13836')">V ODISEA</a>
+      <a mat-menu-item (click)="goToTournament('12219')">IV ODISEA</a>
+      <a mat-menu-item (click)="goToTournament('2')">III ODISEA</a>
     </mat-menu>
 
-    <!-- <a mat-button routerLink="/torneo-presencial">Torneo presencial</a> -->
-    <a mat-button routerLink="/cambios">Cambios</a>
+    <a mat-button routerLink="/logros">Logros</a>
+
   </nav>
 </div>
 <mat-divider></mat-divider>

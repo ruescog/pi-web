@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { OdiseaService } from './odisea.service';
+import { CclService } from './ccl.service';
 
-describe('OdiseaService', () => {
-  let service: OdiseaService;
+describe('CclService', () => {
+  let service: CclService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(OdiseaService);
+    service = TestBed.inject(CclService);
   });
 
   it('should be created', () => {

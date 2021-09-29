@@ -1,0 +1,79 @@
+<div class="leyenda">
+  <h1>Leyenda y palabras clave</h1>
+  <ul>
+    <li>Los logros sobre "Derrotas" podrán reclamarse si no se ha realizado una concesión.</li>
+    <li>Los logros sobre "Top raza" podrán reclamarse a partir del día diez de la competición.</li>
+    <li>Una "Jugada ganadora" es aquella que acaba en "Touchdown".</li>
+    <li>Un "Surfeo" es una jugada que logra sacar del campo, por la banda, a un jugador.</li>
+    <li>Un "Removal" es la eliminación de un jugador del campo por cualquier razón.</li>
+    <li>Un "One turner natural" es un jugador que, de cualquier forma, logra poder moverse 13 casillas por sí solo en un turno.</li>
+    <li>Un "Turnover" es la finalización de un turno de forma drástica tras fallar una tirada.</li>
+    <li>Un "Pitch clear" es la eliminación de todos los jugadores contrarios del campo.</li>
+    <li>Un "PX" es un punto de experiencia.</li>
+    <li>La "LoS" es la "Line of Scrimmage" o "Línea de ataque".</li>
+    <li>El "Drive" de un jugador es aquella parte en la que recibe el balón en el primer turno.</li>
+    <li>Un "Big Guy" es un jugador de fuerza 5 o superior.</li>
+    <li>Un "Mercenario" es un jugador con "Solitario" que juega en el puesto de un jugador lesionado.</li>
+  </ul>
+</div>
+
+<div class="filtro">
+  <mat-form-field class="filtro">
+    <mat-label>Escribe aquí para buscar rápidamente</mat-label>
+    <input matInput (keyup)="filtrar($event)" placeholder="Escribe algo que distinga al logro..." autocomplete="off" #input />
+  </mat-form-field>
+</div>
+
+<div class="encabezado">
+  <h1>Sobre los partidos</h1>
+</div>
+<table mat-table [dataSource]="datasource_run" class="mat-elevation-z8">
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let logro"> {{logro.nombre}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="descripcion">
+      <th mat-header-cell *matHeaderCellDef> Descripción </th>
+      <td mat-cell *matCellDef="let logro"> {{logro.descripcion}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+</table>
+  
+<div class="encabezado">
+  <h1>Sobre el equipo y sus jugadores</h1>
+</div>
+<table mat-table [dataSource]="datasource_jugadores" class="mat-elevation-z8">
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+    <td mat-cell *matCellDef="let logro"> {{logro.nombre}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="descripcion">
+    <th mat-header-cell *matHeaderCellDef> Descripción </th>
+    <td mat-cell *matCellDef="let logro"> {{logro.descripcion}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+</table>
+
+<div class="encabezado">
+  <h1>Sobre las jugadas</h1>
+</div>
+<table mat-table [dataSource]="datasource_jugadas" class="mat-elevation-z8">
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+    <td mat-cell *matCellDef="let logro"> {{logro.nombre}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="descripcion">
+    <th mat-header-cell *matHeaderCellDef> Descripción </th>
+    <td mat-cell *matCellDef="let logro"> {{logro.descripcion}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+</table>

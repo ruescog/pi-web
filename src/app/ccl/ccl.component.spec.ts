@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OdiseaComponent } from './odisea.component';
+import { CclComponent } from './ccl.component';
 
-describe('OdiseaComponent', () => {
-  let component: OdiseaComponent;
-  let fixture: ComponentFixture<OdiseaComponent>;
+describe('CclComponent', () => {
+  let component: CclComponent;
+  let fixture: ComponentFixture<CclComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OdiseaComponent ]
+      declarations: [ CclComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OdiseaComponent);
+    fixture = TestBed.createComponent(CclComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

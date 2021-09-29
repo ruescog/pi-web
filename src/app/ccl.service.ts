@@ -6,15 +6,16 @@ import { JugadorEquipoSpike } from './JugadorEquipoSpike';
 @Injectable({
   providedIn: 'root'
 })
-export class OdiseaService {
 
-  private odiseaUrl = "https://pi-web-service.herokuapp.com/clasificacion-odisea"
-  // private odiseaUrl = "http://127.0.0.1:30504/clasificacion-odisea"
+export class CclService {
+
+  private cclUrl = "https://pi-web-service.herokuapp.com/clasificacion-ccl"
+  // private cclUrl = "http://127.0.0.1:30504/clasificacion-ccl"
 
   constructor(private http: HttpClient) { }
 
   getClasificacion(idtournament: number): Observable<JugadorEquipoSpike[]> {
-    return this.http.get<JugadorEquipoSpike[]>(this.odiseaUrl + "/" + idtournament)
+    return this.http.get<JugadorEquipoSpike[]>(this.cclUrl + "/" + idtournament)
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

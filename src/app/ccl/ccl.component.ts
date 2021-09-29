@@ -2,32 +2,31 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { MatTableDataSource } from '@angular/material/table';
-
-import { OdiseaService } from '../odisea.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { CclService } from '../ccl.service';
 
 @Component({
-  selector: 'app-odisea',
-  templateUrl: './odisea.component.html',
-  styleUrls: ['./odisea.component.css']
+  selector: 'app-ccl',
+  templateUrl: './ccl.component.html',
+  styleUrls: ['./ccl.component.css']
 })
-export class OdiseaComponent implements OnInit {
+export class CclComponent implements OnInit {
 
   columnas = ["position", "coach_name", "team_name", "race_name", "wins", "draws", "losses", "ranking", "td", "cas"];
   clasificacion: any;
   entrenadores: any;
   razas: any;
 
-  constructor(private barra_mensaje: MatSnackBar, private route: ActivatedRoute, private location: Location, private odiseaService: OdiseaService) { }
+  constructor(private barra_mensaje: MatSnackBar, private route: ActivatedRoute, private location: Location, private cclService: CclService) { }
 
   ngOnInit(): void {
     this.getClasificacion()
-    this.barra_mensaje.open("La temporada termina el día 23/06/2021", "x");
+    this.barra_mensaje.open("La temporada termina el día 7/11/2021", "x");
   }
 
   getClasificacion(): void {
     const idtournament = Number(this.route.snapshot.paramMap.get("idtournament"))
-    this.odiseaService.getClasificacion(idtournament).subscribe(jugadores => {
+    this.cclService.getClasificacion(idtournament).subscribe(jugadores => {
       // Recoge la clasificacion
       this.clasificacion = new MatTableDataSource(jugadores)
       var copia_jugadores = [...jugadores]

@@ -11,8 +11,8 @@ export class AppComponent {
 
   constructor(private router: Router) {}
 
-  goToOdisea(idtournament: string): void {
-    const url = "/odisea" + "/" + idtournament
+  goToTournament(idtournament: string): void {
+    const url = "/ccl" + "/" + idtournament
     this.router.navigateByUrl(url).then(_ => window.location.reload())
   }
 }
