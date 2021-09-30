@@ -12,6 +12,13 @@ table {
     width: 75%;
 }
 
+.informacion {
+    margin: auto;
+    margin-top: 2%;
+    width: 100%;
+    text-align: center;
+}
+
 .carga {
     width: 10%;
     margin: auto;

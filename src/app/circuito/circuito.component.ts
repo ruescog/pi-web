@@ -16,11 +16,10 @@ export class CircuitoComponent implements OnInit {
   clasificacion: any
   columnas = ["position", "coach_name", "wins", "draws", "losses", "td", "ctd", "dtd", "cas", "ccas", "dcas", "concesions", "points"]
 
-  constructor(private barra_mensaje: MatSnackBar, private circuitoService: CircuitoService) { }
+  constructor(private circuitoService: CircuitoService) { }
 
   ngOnInit(): void {
     this.getClasificacion();
-    this.barra_mensaje.open("Última actualización: 02/06/2021", "x");
   }
 
   getClasificacion(): void {

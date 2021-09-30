@@ -18,7 +18,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { IndiceComponent } from './indice/indice.component';
-import { CambiosComponent } from './cambios/cambios.component';
 import { CircuitoComponent } from './circuito/circuito.component';
 import { CclComponent } from './ccl/ccl.component';
 import { LogrosComponent } from './logros/logros.component';
@@ -40,7 +39,6 @@ const angularMaterial = [
   declarations: [
     AppComponent,
     IndiceComponent,
-    CambiosComponent,
     CircuitoComponent,
     CclComponent,
     LogrosComponent

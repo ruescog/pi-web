@@ -17,11 +17,10 @@ export class CclComponent implements OnInit {
   entrenadores: any;
   razas: any;
 
-  constructor(private barra_mensaje: MatSnackBar, private route: ActivatedRoute, private location: Location, private cclService: CclService) { }
+  constructor(private route: ActivatedRoute, private location: Location, private cclService: CclService) { }
 
   ngOnInit(): void {
     this.getClasificacion()
-    this.barra_mensaje.open("La temporada termina el día 7/11/2021", "x");
   }
 
   getClasificacion(): void {
